@@ -79,6 +79,21 @@ body::-webkit-scrollbar-thumb:hover {
     }
 }
 
+// Button Mixin
+
+@mixin button(){
+    border-radius: 0px;
+    border: 2px solid $principal-color;
+    font-family: $poppins-font;
+    transition: all 200ms !important;
+    color: $principal-color;
+    font-weight: 600;
+    
+    &:hover{
+        background: $principal-color;
+        color: white;
+    }
+}
 
 // fonts
 
@@ -335,17 +350,7 @@ section{
     }
 
     .demo-btn{
-        border-radius: 0px;
-        border: 2px solid $principal-color;
-        font-family: $poppins-font;
-        transition: all 200ms;
-        color: $principal-color;
-        font-weight: 600;
-        
-        &:hover{
-            background: $principal-color;
-            color: white;
-        }
+        @include button();
     }
 
     .repo-btn{
@@ -357,6 +362,23 @@ section{
         text-decoration: none;
         display: flex;
         align-items: center;
+    }
+}
+
+// More Projects Button
+
+.more-projects-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    a{
+        text-decoration: none;
+        text-align: center;
+        width: 50%;
+        font-size: 25px;
+        background-color: #f6f6f6;
+        @include button();
     }
 }
 

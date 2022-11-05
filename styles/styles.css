@@ -265,7 +265,7 @@ section h2 {
   border-radius: 0px;
   border: 2px solid #4062bb;
   font-family: "Poppins", sans-serif;
-  transition: all 200ms;
+  transition: all 200ms !important;
   color: #4062bb;
   font-weight: 600;
 }
@@ -282,6 +282,29 @@ section h2 {
   text-decoration: none;
   display: flex;
   align-items: center;
+}
+
+.more-projects-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.more-projects-container a {
+  text-decoration: none;
+  text-align: center;
+  width: 50%;
+  font-size: 25px;
+  background-color: #f6f6f6;
+  border-radius: 0px;
+  border: 2px solid #4062bb;
+  font-family: "Poppins", sans-serif;
+  transition: all 200ms !important;
+  color: #4062bb;
+  font-weight: 600;
+}
+.more-projects-container a:hover {
+  background: #4062bb;
+  color: white;
 }
 
 #contact {
