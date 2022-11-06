@@ -3,7 +3,7 @@ const navbarContainer = document.querySelector('.navbar-container');
 const freeGamesImg = document.querySelector('.free-games-img');
 const weatherAppImg = document.querySelector('.weather-app-img');
 const todoAppImg = document.querySelector('.todo-app-img');
-const quotesGeneratorImg = document.querySelector('.quotes-generator-img');
+const gifExpertAppImg = document.querySelector('.gif-expert-app-generator-img');
 
 document.addEventListener('DOMContentLoaded', () => {
     responsiveValidation();
@@ -49,11 +49,11 @@ function changeImgs(){
         freeGamesImg.src = '../assets/images/free-games-app-responsive.webp';
         weatherAppImg.src = '../assets/images/weather-app-responsive.webp';
         todoAppImg.src = '../assets/images/todo-app-responsive.webp';
-        quotesGeneratorImg.src = '../assets/images/quotes-generator-app-responsive.webp';
+        gifExpertAppImg.src = '../assets/images/gif-expert-app-responsive.webp';
     } else {
         freeGamesImg.src = '../assets/images/free-games-app.webp';
         weatherAppImg.src = '../assets/images/weather-app.webp';
         todoAppImg.src = '../assets/images/todo-app.webp';
-        quotesGeneratorImg.src = '../assets/images/quotes-generator-app.webp';
+        gifExpertAppImg.src = '../assets/images/gif-expert-app.webp';
     }
 }
