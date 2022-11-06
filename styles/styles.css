@@ -421,6 +421,15 @@ footer p {
     width: 100%;
   }
 }
+@media only screen and (max-width: 933px) {
+  .more-projects-container {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+  .more-projects-container a {
+    width: 75%;
+  }
+}
 @media only screen and (max-width: 767px) {
   #services .services-container {
     grid-template-columns: 1fr;
@@ -438,6 +447,10 @@ footer p {
   }
   header .presentation h2 {
     font-size: 25px;
+  }
+
+  .more-projects-container a {
+    width: 100%;
   }
 }
 @media only screen and (max-width: 475px) {
@@ -490,6 +503,14 @@ footer p {
   }
   header .presentation h2 {
     font-size: 22px;
+  }
+
+  .more-projects-container {
+    margin-right: 12px;
+    margin-left: 12px;
+  }
+  .more-projects-container a {
+    font-size: 20px;
   }
 }
 @media only screen and (max-width: 340px) {

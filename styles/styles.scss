@@ -497,7 +497,16 @@ footer{
             width: 100%;
         }
     }
+}
 
+@media only screen and (max-width: 933px){
+    .more-projects-container{
+        margin-right: 20px;
+        margin-left: 20px;
+        a{
+            width: 75%;
+        }
+    }
 }
 
 @media only screen and (max-width: 767px){
@@ -525,6 +534,10 @@ footer{
             font-size: 25px;
         }
     } 
+
+    .more-projects-container a{
+        width: 100%;
+    }
 }
 
 @media only screen and (max-width: 475px){
@@ -563,6 +576,14 @@ footer{
 
         h2{
             font-size: 22px;
+        }
+    }
+
+    .more-projects-container{
+        margin-right: 12px;
+        margin-left: 12px;
+        a{
+            font-size: 20px;
         }
     }
 } 
