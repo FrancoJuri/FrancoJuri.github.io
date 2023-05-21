@@ -13,6 +13,10 @@
     <meta property="og:image" content="./assets/images/web-image.jpg">
     <meta property="og:url" content="https://francojuri.github.io/">
     <title>Franco Juri | Portafolio</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+      emailjs.init('hNlKkEaOsvDT7BUJj')
+    </script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./styles/styles.css">
@@ -25,6 +29,10 @@
 </head>
 
 <body class="scrollspy-example" data-bs-spy="scroll" data-bs-target=".navbar" data-bs-root-margin="0px 0px -40%">
+
+  <a id="whatsapp-fixed-btn" href="https://wa.link/inrbh8" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
     
   <!-- Header -->
     
@@ -81,8 +89,8 @@
 
       <div class="about-me" data-aos="fade-up" data-aos-duration="800">
         <h2 class="montserrat-font text-center mx-auto mb-0">Sobre mí</h2>
-        <p class="poppins-font text-center mt-3 mb-2 mx-auto">Soy un desarrollador web actualmente disponible para trabajos como freelancer. Apoyo a diseñadores, empresas y emprendedores a dar vida a sus ideas.</p>
-        <p class="poppins-font text-center mx-auto mb-0">
+        <p class="container poppins-font text-center mt-3 mb-2 mx-auto">Soy un desarrollador web actualmente disponible para trabajos como freelancer. Apoyo a diseñadores, empresas y emprendedores a dar vida a sus ideas.</p>
+        <p class="container poppins-font text-center mx-auto mb-0">
           Estoy constantemente capacitándome y aprendiendo nuevas tecnologías de forma autodidacta con el objetivo de poder ayudarte a mejorar el rendimiento y la experiencia de usuario en tus aplicaciones web.
         </p>
       </div>
@@ -226,7 +234,7 @@
   
             <div class="d-flex gap-4">
               <a class="btn demo-btn" href="https://freegames.francojuri.com/" target="_blank">
-                Demo
+                Ver la Web
               </a>
               <a class="repo-btn" href="https://github.com/FrancoJuri/react-FreeGamesApp" target="_blank">Repo</a>
             </div>
@@ -255,7 +263,7 @@
   
             <div class="d-flex gap-4">
               <a class="btn demo-btn" href="https://gifexpert.francojuri.com/" target="_blank">
-                Demo
+                Ver la Web
               </a>
               <a class="repo-btn" href="https://github.com/FrancoJuri/React-Gif-Expert-App" target="_blank">Repo</a>
             </div>
@@ -284,7 +292,7 @@
   
             <div class="d-flex gap-4">
               <a class="btn demo-btn" href="https://weather.francojuri.com/" target="_blank">
-                Demo
+                Ver la Web
               </a>
               <a class="repo-btn" href="https://github.com/FrancoJuri/weather-app" target="_blank">Repo</a>
             </div>
@@ -314,7 +322,7 @@
   
             <div class="d-flex gap-4">
               <a class="btn demo-btn" href="https://todo.francojuri.com/" target="_blank">
-                Demo
+                Ver la Web
               </a>
               <a class="repo-btn" href="https://github.com/FrancoJuri/react-todo-app" target="_blank">Repo</a>
             </div>
@@ -329,7 +337,7 @@
 
     </section>
 
-    <div data-aos="fade-up" data-aos-duration="800" class="more-projects-container mt-0 mt-lg-5">
+    <div data-aos="fade-up" data-aos-duration="800" class="container more-projects-container mt-0 mt-lg-5">
       <a href="https://github.com/FrancoJuri?tab=repositories" target="_blank" class="p-3">
         Ver Todos los Proyectos en Github
       </a>
@@ -342,7 +350,7 @@
       <div data-aos="fade-up" data-aos-duration="800">
         <h2 class="montserrat-font text-center mx-auto mb-0">Contáctame</h2>
         <p class="poppins-font text-center mt-3 mx-auto mb-0">
-          Siempre disponible para trabajos como freelancer si aparece el proyecto adecuado.
+          Siempre disponible para trabajos como freelancer para el proyecto adecuado.
         </p>
         <p class="poppins-font fw-bold text-center mx-auto mb-0 mt-1">
           ¡No dudes en contactarme!
@@ -377,8 +385,8 @@
     </section>
 
     <footer class="d-flex justify-content-center align-items-center py-4">
-      <p class="mb-0 text-center poppins-font">
-        Copyright &copy; 2022. <a href="https://github.com/FrancoJuri" target="_blank">@FrancoJuri</a> 
+      <p class="container mb-0 text-center poppins-font">
+        Copyright &copy; <span id="copyright-year"></span>. <a href="https://github.com/FrancoJuri" target="_blank">@FrancoJuri</a> 
         <br>
         Todos los derechos reservados
       </p>

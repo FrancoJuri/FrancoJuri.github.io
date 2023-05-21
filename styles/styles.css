@@ -9,18 +9,47 @@ body {
   background-color: #f6f6f6;
 }
 
+html, body {
+  font-size: 16px;
+}
+
 body::-webkit-scrollbar {
-  width: 10px;
-  height: 8px;
+  width: 0.625rem;
+  height: 0.5rem;
 }
 
 body::-webkit-scrollbar-thumb {
   background: #606060;
-  border-radius: 8px;
+  border-radius: 0.5rem;
 }
 
 body::-webkit-scrollbar-thumb:hover {
   background: rgb(133, 133, 133);
+}
+
+#whatsapp-fixed-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  font-size: 2.5em;
+  width: 4rem;
+  height: 4rem;
+  right: 1.75rem;
+  bottom: 1.75rem;
+  border-radius: 50%;
+  background-color: #50F06C;
+  color: white;
+  text-align: center;
+  z-index: 100;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+  transition: 0.25s;
+}
+
+#whatsapp-fixed-btn:hover {
+  color: #50F06C;
+  background-color: white;
 }
 
 .montserrat-font {
@@ -56,11 +85,11 @@ header .presentation {
 header .presentation h2 {
   color: white;
   font-family: "Poppins", sans-serif;
-  font-size: 30px;
+  font-size: 1.875rem;
 }
 header .presentation h1 {
   color: white;
-  font-size: 60px;
+  font-size: 3.75em;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -76,7 +105,7 @@ header .presentation h1 {
   transition: all 300ms;
 }
 .navbar .navbar-brand {
-  font-size: 24px;
+  font-size: 1.5em;
 }
 .navbar .navbar-brand::before {
   content: "< ";
@@ -92,14 +121,14 @@ header .presentation h1 {
   color: #9d9d9d;
   font-family: "Poppins";
   font-weight: 400;
-  font-size: 18px;
+  font-size: 1.125em;
   transition: all 250ms;
 }
 .navbar .nav-link:hover {
   color: white;
 }
 .navbar .navbar-nav {
-  gap: 12px;
+  gap: 0.75rem;
 }
 .navbar .navbar-collapse {
   justify-content: flex-end;
@@ -113,78 +142,77 @@ header .presentation h1 {
 }
 
 section {
-  padding-top: 95px;
-  padding-bottom: 95px;
+  padding-top: 5.95rem;
+  padding-bottom: 5.95rem;
 }
 section h2 {
-  font-size: 40px;
+  font-size: 2.5em;
 }
 
 #about {
-  padding-top: 90px;
+  padding-top: 5.625rem;
 }
 #about .about-me p {
-  font-size: 18px;
-  width: 70%;
-  line-height: 32px;
+  font-size: 1.125em;
+  line-height: 2rem;
 }
 #about .about-me h2::after {
   content: "";
   display: block;
-  width: 195px;
-  height: 5px;
+  width: 12.1875rem;
+  height: 0.3125rem;
   background: #4062bb;
-  margin: 10px auto 20px;
+  margin: 0.625rem auto 1.25rem;
 }
 #about .my-skills h3 {
-  font-size: 30px;
+  font-size: 1.875em;
 }
 #about .my-skills .skills-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 25px;
+  gap: 1.5rem;
   justify-content: center;
   align-items: center;
 }
 #about .my-skills .skills-item {
-  width: 200px;
+  width: 12.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 20px;
-  padding: 35px;
+  gap: 1.25rem;
+  padding: 2.125rem;
   background-color: #eaeaea;
 }
 #about .my-skills .skills-item span {
-  font-size: 18px;
+  font-size: 1.125em;
   font-family: "Poppins", sans-serif;
   font-weight: 600;
 }
 #about .my-skills .skills-item svg {
-  font-size: 50px;
+  font-size: 3.125em;
 }
 
 #services h2::after {
   content: "";
   display: block;
-  width: 180px;
-  height: 5px;
+  width: 11.25rem;
+  height: 0.3125rem;
   background: #4062bb;
-  margin: 10px auto 20px;
+  margin: 0.625rem auto 1.25rem;
 }
 #services .services-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
+  gap: 1.5rem;
 }
 #services .services-item {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  border-bottom: 5px solid transparent;
-  padding: 20px;
+  border-bottom: 0.3125rem solid transparent;
+  padding: 1.25rem;
   background-color: #eaeaea;
   transition: all 350ms ease;
 }
@@ -195,46 +223,46 @@ section h2 {
   color: #4062bb;
 }
 #services .services-item svg {
-  margin: 20px 0px;
-  font-size: 50px;
+  margin: 1.25rem 0rem;
+  font-size: 3.125rem;
   transition: all 350ms ease;
 }
 #services .services-item h3 {
-  font-size: 22px;
+  font-size: 1.375rem;
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   text-align: center;
-  margin-bottom: 15px;
+  margin-bottom: 0.9375rem;
 }
 #services .services-item p {
   font-family: "Poppins", sans-serif;
-  font-size: 18px;
-  margin-bottom: 0px;
+  font-size: 1.125em;
+  margin-bottom: 0;
   text-align: center;
 }
 
 #portfolio h2::after {
   content: "";
   display: block;
-  width: 185px;
-  height: 5px;
+  width: 11.5625rem;
+  height: 0.3125rem;
   background: #4062bb;
-  margin: 10px auto 20px;
+  margin: 0.625rem auto 1.25rem;
 }
 #portfolio .projects-container {
   display: flex;
   flex-direction: column;
-  gap: 180px;
+  gap: 11.25rem;
 }
 #portfolio .project {
   display: flex;
   flex-flow: row nowrap;
-  gap: 80px;
+  gap: 5rem;
 }
 #portfolio .project .project-img {
   width: 60%;
   height: auto;
-  border-radius: 12px;
+  border-radius: 0.75rem;
   box-shadow: 0 13px 27px -5px hsla(240deg, 30%, 28%, 0.25), 0 8px 16px -8px hsla(0deg, 0%, 0%, 0.3), 0 -6px 16px -6px hsla(0deg, 0%, 0%, 0.03);
   order: 1;
 }
@@ -243,23 +271,23 @@ section h2 {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  gap: 20px;
+  gap: 1.25rem;
   width: 40%;
 }
 #portfolio .project-info h4 {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
-  font-size: 30px;
+  font-size: 1.875em;
 }
 #portfolio .project-info p {
   font-family: "Poppins", sans-serif;
-  font-size: 18px;
+  font-size: 1.125em;
 }
 #portfolio .project-info p a {
   color: rgb(33, 37, 41);
 }
 #portfolio .project-info svg {
-  font-size: 32px;
+  font-size: 2rem;
 }
 #portfolio .demo-btn {
   border-radius: 0px;
@@ -292,8 +320,7 @@ section h2 {
 .more-projects-container a {
   text-decoration: none;
   text-align: center;
-  width: 50%;
-  font-size: 25px;
+  font-size: 1.5rem;
   background-color: #f6f6f6;
   border-radius: 0px;
   border: 2px solid #4062bb;
@@ -308,20 +335,19 @@ section h2 {
 }
 
 #contact {
-  padding-bottom: 90px;
+  padding-bottom: 5.625rem;
 }
 #contact h2::after {
   content: "";
   display: block;
-  width: 242px;
-  height: 5px;
+  width: 15.125rem;
+  height: 0.3125rem;
   background: #4062bb;
-  margin: 10px auto 20px;
+  margin: 0.625rem auto 1.25rem;
 }
 #contact p {
-  width: 80%;
-  font-size: 20px;
-  line-height: 30px;
+  font-size: 1.25em;
+  line-height: 1.875rem;
 }
 #contact a {
   text-decoration: none;
@@ -332,15 +358,15 @@ section h2 {
   justify-content: center;
   align-items: center;
   grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
+  gap: 1.5rem;
 }
 #contact .info-item {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  border-bottom: 5px solid transparent;
-  padding: 50px;
+  border-bottom: 0.3125rem solid transparent;
+  padding: 3.125rem;
   background-color: #eaeaea;
   transition: all 350ms ease;
 }
@@ -351,16 +377,16 @@ section h2 {
   color: #4062bb;
 }
 #contact .info-item svg {
-  margin: 20px 0px;
-  font-size: 50px;
+  margin: 1.25rem 0rem;
+  font-size: 3.125rem;
   transition: all 350ms ease;
 }
 #contact .info-item h3 {
-  font-size: 24px;
+  font-size: 1.5rem;
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   text-align: center;
-  margin-bottom: 15px;
+  margin-bottom: 0.9375rem;
 }
 
 footer {
@@ -374,7 +400,7 @@ footer a:hover {
   color: white;
 }
 footer p {
-  font-size: 16px;
+  font-size: 1em;
   color: #c6c6c6;
 }
 
@@ -387,7 +413,7 @@ footer p {
     grid-template-columns: repeat(2, 1fr);
   }
   #services .services-item h3 {
-    font-size: 20px;
+    font-size: 1.25rem;
   }
 }
 @media only screen and (max-width: 992px) {
@@ -395,7 +421,7 @@ footer p {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 40px;
+    gap: 2.5rem;
   }
   #portfolio .project .project-img {
     width: 100%;
@@ -416,19 +442,6 @@ footer p {
   #contact .info-container {
     grid-template-columns: 1fr;
   }
-
-  #about .about-me p {
-    width: 100%;
-  }
-}
-@media only screen and (max-width: 933px) {
-  .more-projects-container {
-    margin-right: 20px;
-    margin-left: 20px;
-  }
-  .more-projects-container a {
-    width: 75%;
-  }
 }
 @media only screen and (max-width: 767px) {
   #services .services-container {
@@ -436,150 +449,153 @@ footer p {
   }
 
   #portfolio .project .project-img {
-    width: 250px;
-    height: 500px;
+    width: 15.625rem;
+    height: 31.25rem;
     box-shadow: none;
   }
 }
 @media only screen and (max-width: 600px) {
   header .presentation h1 {
-    font-size: 50px;
+    font-size: 3.125em;
   }
   header .presentation h2 {
-    font-size: 25px;
-  }
-
-  .more-projects-container a {
-    width: 100%;
+    font-size: 1.5em;
   }
 }
 @media only screen and (max-width: 475px) {
   section h2 {
-    font-size: 36px;
+    font-size: 2.25em;
   }
 
   #about .about-me h2::after {
     content: "";
     display: block;
-    width: 180px;
-    height: 5px;
+    width: 11.25rem;
+    height: 0.3125rem;
     background: #4062bb;
-    margin: 10px auto 20px;
+    margin: 0.625rem auto 1.25rem;
   }
   #about .my-skills h3 {
-    font-size: 28px;
+    font-size: 1.75em;
   }
 
   #services h2::after {
     content: "";
     display: block;
-    width: 160px;
-    height: 5px;
+    width: 10rem;
+    height: 0.3125rem;
     background: #4062bb;
-    margin: 10px auto 20px;
+    margin: 0.625rem auto 1.25rem;
   }
 
   #portfolio h2::after {
     content: "";
     display: block;
-    width: 165px;
-    height: 5px;
+    width: 10.3125rem;
+    height: 0.3125rem;
     background: #4062bb;
-    margin: 10px auto 20px;
+    margin: 0.625rem auto 1.25rem;
   }
 
   #contact h2::after {
     content: "";
     display: block;
-    width: 218px;
-    height: 5px;
+    width: 13.625rem;
+    height: 0.3125rem;
     background: #4062bb;
-    margin: 10px auto 20px;
+    margin: 0.625rem auto 1.25rem;
+  }
+
+  #whatsapp-fixed-btn {
+    right: 1rem;
+    bottom: 1rem;
+    width: 3.75rem;
+    height: 3.75rem;
+  }
+
+  html, body {
+    font-size: 14px;
+  }
+
+  #contact p {
+    font-size: 1.15rem;
   }
 }
 @media only screen and (max-width: 400px) {
   header .presentation h1 {
-    font-size: 45px;
+    font-size: 2.75em;
   }
   header .presentation h2 {
-    font-size: 22px;
-  }
-
-  .more-projects-container {
-    margin-right: 12px;
-    margin-left: 12px;
-  }
-  .more-projects-container a {
-    font-size: 20px;
+    font-size: 1.375em;
   }
 }
 @media only screen and (max-width: 340px) {
   section h2 {
-    font-size: 30px;
+    font-size: 1.875em;
   }
 
   #portfolio .project-info h4 {
-    font-size: 25px;
+    font-size: 1.5em;
   }
 
   #about .about-me h2::after {
     content: "";
     display: block;
-    width: 150px;
-    height: 5px;
+    width: 9.375rem;
+    height: 0.3125rem;
     background: #4062bb;
-    margin: 10px auto 20px;
+    margin: 0.625rem auto 1.25rem;
   }
   #about .my-skills h3 {
-    font-size: 25px;
+    font-size: 1.5em;
   }
 
   #services h2::after {
     content: "";
     display: block;
-    width: 134px;
-    height: 5px;
+    width: 8.375rem;
+    height: 0.3125rem;
     background: #4062bb;
-    margin: 10px auto 20px;
+    margin: 0.625rem auto 1.25rem;
   }
 
   #portfolio h2::after {
     content: "";
     display: block;
-    width: 136px;
-    height: 5px;
+    width: 8.5rem;
+    height: 0.3125rem;
     background: #4062bb;
-    margin: 10px auto 20px;
+    margin: 0.625rem auto 1.25rem;
   }
 
   #contact h2::after {
     content: "";
     display: block;
-    width: 180px;
-    height: 5px;
+    width: 11.25rem;
+    height: 0.3125rem;
     background: #4062bb;
-    margin: 10px auto 20px;
+    margin: 0.625rem auto 1.25rem;
   }
 
   .navbar .navbar-brand {
-    font-size: 20px;
+    font-size: 1.25em;
   }
 }
 @media only screen and (max-width: 303px) {
   header .presentation h1 {
-    font-size: 39px;
+    font-size: 2.375em;
   }
   header .presentation h2 {
-    font-size: 20px;
+    font-size: 1.25em;
   }
 
   #contact .info-item {
-    padding: 36px;
+    padding: 2.25rem;
   }
 
   #portfolio .project .project-img {
-    width: 210px;
-    height: 460px;
+    width: 13.125rem;
+    height: 28.75rem;
   }
 }
 

@@ -18,18 +18,47 @@ body{
     background-color: #f6f6f6;
 }
 
+html, body{
+    font-size: 16px;
+}
+
 body::-webkit-scrollbar {
-    width: 10px;
-    height: 8px;
+    width: .625rem;
+    height: .5rem;
 }
 
 body::-webkit-scrollbar-thumb {
     background: #606060;
-    border-radius: 8px;
+    border-radius: .5rem;
 }
 
 body::-webkit-scrollbar-thumb:hover {
     background: rgb(133, 133, 133);
+}
+
+#whatsapp-fixed-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    font-size: 2.5em;
+    width: 4rem;
+    height: 4rem;
+    right: 1.75rem;
+    bottom: 1.75rem;
+    border-radius: 50%;
+    background-color: #50F06C;
+    color: white;
+    text-align: center;
+    z-index: 100;
+    box-shadow: 0px 1px 10px rgba(0,0,0, 0.3);
+    text-decoration: none;
+    transition: .25s;
+}
+
+#whatsapp-fixed-btn:hover{
+    color: #50F06C;
+    background-color: white;
 }
 
 
@@ -39,9 +68,9 @@ body::-webkit-scrollbar-thumb:hover {
     content: "";
     display: block;
     width: $width;
-    height: 5px;
+    height: .3125rem;
     background: $principal-color;
-    margin: 10px auto 20px;
+    margin: .625rem auto 1.25rem;
 }
 
 // box Item mixin
@@ -51,7 +80,7 @@ body::-webkit-scrollbar-thumb:hover {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    border-bottom: 5px solid transparent;
+    border-bottom: .3125rem solid transparent;
     padding: $padding;
     background-color: $gray-color;
     transition: all 350ms ease;
@@ -132,12 +161,12 @@ header{
         h2{
             color: white;
             font-family: $poppins-font;
-            font-size: 30px;
+            font-size: 1.875rem;
         }
     
         h1{
             color: white;
-            font-size: 60px;
+            font-size: 3.75em;
             font-family: $montserrat-font;
         }
     }
@@ -156,7 +185,7 @@ header{
     transition: all 300ms;
 
     .navbar-brand{
-        font-size: 24px;
+        font-size: 1.5em;
 
         &::before{
             content: '< ';
@@ -175,7 +204,7 @@ header{
         color: #9d9d9d;
         font-family: 'Poppins';
         font-weight: 400;
-        font-size: 18px;
+        font-size: 1.125em;
         transition: all 250ms;
     }
 
@@ -184,7 +213,7 @@ header{
     }
 
     .navbar-nav{
-        gap: 12px;
+        gap: .75rem;
     }
     
     .navbar-collapse{
@@ -204,63 +233,62 @@ header{
 // SECTIONS
 
 section{
-    padding-top: 95px;
-    padding-bottom: 95px;
+    padding-top: 5.95rem;
+    padding-bottom: 5.95rem;
 
     h2{
-        font-size: 40px;
+        font-size: 2.5em;
     }
 }
 
 // About Section
 
 #about{
-    padding-top: 90px;
+    padding-top: 5.625rem;
 
     .about-me{
         p{
-            font-size: 18px;
-            width: 70%;
-            line-height: 32px;
+            font-size: 1.125em;
+            line-height: 2rem;
         }
 
         h2::after{
-            @include titlesBorder(195px);
+            @include titlesBorder(12.1875rem);
         }
     }
 
     .my-skills{
 
         h3{
-            font-size: 30px;
+            font-size: 1.875em;
         }
 
         .skills-container{
             display: flex;
             flex-wrap: wrap;
-            gap: 25px;
+            gap: 1.5rem;
             justify-content: center; 
             align-items: center;
         }
 
         .skills-item{
-            width: 200px;
+            width: 12.5rem;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            gap: 20px;
-            padding: 35px;
+            gap: 1.25rem;
+            padding: 2.125rem;
             background-color: $gray-color;
 
             span{
-                font-size: 18px;
+                font-size: 1.125em;
                 font-family: $poppins-font;
                 font-weight: 600;
             }
 
             svg{
-                font-size: 50px;
+                font-size: 3.125em;
             }
         }
 
@@ -273,22 +301,22 @@ section{
 #services{
 
     h2::after{
-        @include titlesBorder(180px);
+        @include titlesBorder(11.25rem);
     }
 
     .services-container{
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 25px;
+        gap: 1.5rem;
     }
 
     .services-item{
-        @include boxItem(20px, 50px, 20px 0px, 22px, 15px);
+        @include boxItem(1.25rem, 3.125rem, 1.25rem 0rem, 1.375rem, .9375rem);
 
         p{
             font-family: $poppins-font;
-            font-size: 18px;
-            margin-bottom: 0px;
+            font-size: 1.125em;
+            margin-bottom: 0;
             text-align: center;
         }
     }
@@ -298,24 +326,24 @@ section{
 
 #portfolio{
     h2::after{
-        @include titlesBorder(185px);
+        @include titlesBorder(11.5625rem);
     }
 
     .projects-container{
         display: flex;
         flex-direction: column;
-        gap: 180px;
+        gap: 11.25rem;
     }
 
     .project{
         display: flex;
         flex-flow: row nowrap;  
-        gap: 80px;
+        gap: 5rem;
 
         .project-img{
             width: 60%;
             height: auto;
-            border-radius: 12px;
+            border-radius: .75rem;
             box-shadow: 0 13px 27px -5px hsl(240deg 30% 28% / 25%), 0 8px 16px -8px hsl(0deg 0% 0% / 30%), 0 -6px 16px -6px hsl(0deg 0% 0% / 3%);
             order: 1;
         }
@@ -326,18 +354,18 @@ section{
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
-        gap: 20px;
+        gap: 1.25rem;
         width: 40%;
 
         h4{
             font-family: $poppins-font;
             font-weight: 600;
-            font-size: 30px;
+            font-size: 1.875em;
         }
 
         p{
             font-family: $poppins-font;
-            font-size: 18px;
+            font-size: 1.125em;
 
             a{
                 color: rgb(33, 37, 41);
@@ -345,7 +373,7 @@ section{
         }
 
         svg{
-            font-size: 32px;
+            font-size: 2rem;
         }
     }
 
@@ -375,8 +403,7 @@ section{
     a{
         text-decoration: none;
         text-align: center;
-        width: 50%;
-        font-size: 25px;
+        font-size: 1.5rem;
         background-color: #f6f6f6;
         @include button();
     }
@@ -385,16 +412,15 @@ section{
 // Contact
 
 #contact{
-    padding-bottom: 90px;
+    padding-bottom: 5.625rem;
 
     h2::after{
-        @include titlesBorder(242px);
+        @include titlesBorder(15.125rem);
     }
 
     p{
-        width: 80%;
-        font-size: 20px;
-        line-height: 30px;
+        font-size: 1.25em;
+        line-height: 1.875rem;
     }
 
     a{
@@ -407,11 +433,11 @@ section{
         justify-content: center;
         align-items: center;
         grid-template-columns: repeat(3, 1fr);
-        gap: 25px;
+        gap: 1.5rem;
     }
 
     .info-item{
-        @include boxItem(50px, 50px, 20px 0px, 24px, 15px);
+        @include boxItem(3.125rem, 3.125rem, 1.25rem 0rem, 1.5rem, .9375rem);
     }
 }
 
@@ -429,7 +455,7 @@ footer{
     }
 
     p{
-        font-size: 16px;
+        font-size: 1em;
         color: darken($gray-color, 14%);
     }
 }
@@ -454,7 +480,7 @@ footer{
         }
 
         .services-item h3{
-            font-size: 20px;
+            font-size: 1.25rem;
         }
     }
 }
@@ -465,7 +491,7 @@ footer{
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            gap: 40px;
+            gap: 2.5rem;
 
             .project-img{
                 width: 100%;
@@ -491,22 +517,6 @@ footer{
     #contact .info-container{
         grid-template-columns: 1fr;
     }
-
-    #about{
-        .about-me p{
-            width: 100%;
-        }
-    }
-}
-
-@media only screen and (max-width: 933px){
-    .more-projects-container{
-        margin-right: 20px;
-        margin-left: 20px;
-        a{
-            width: 75%;
-        }
-    }
 }
 
 @media only screen and (max-width: 767px){
@@ -517,8 +527,8 @@ footer{
     }
 
     #portfolio .project .project-img{
-        width: 250px;
-        height: 500px;
+        width: 15.625rem;
+        height: 31.25rem;
         box-shadow: none;
     }
     
@@ -527,120 +537,123 @@ footer{
 @media only screen and (max-width: 600px){
     header .presentation{
         h1{
-            font-size: 50px;
+            font-size: 3.125em;
         }
         
         h2{
-            font-size: 25px;
+            font-size: 1.5em;
         }
     } 
-
-    .more-projects-container a{
-        width: 100%;
-    }
 }
 
 @media only screen and (max-width: 475px){
     section h2{
-        font-size: 36px;
+        font-size: 2.25em;
     }
 
     #about{
         .about-me h2::after{
-            @include titlesBorder(180px);
+            @include titlesBorder(11.25rem);
         }
 
         .my-skills h3{
-            font-size: 28px;
+            font-size: 1.75em;
         }
     }
 
     #services h2::after{
-        @include titlesBorder(160px);
+        @include titlesBorder(10rem);
     }
 
     #portfolio h2::after{
-        @include titlesBorder(165px);
+        @include titlesBorder(10.3125rem);
     }
 
     #contact h2::after{
-        @include titlesBorder(218px);
+        @include titlesBorder(13.625rem);
+    }
+
+    #whatsapp-fixed-btn{
+        right: 1rem;
+        bottom: 1rem;
+        width: 3.75rem;
+        height: 3.75rem;
+    }
+
+    html, body{
+        font-size: 14px;
+    }
+
+    #contact p{
+        font-size: 1.15rem;
     }
 }
 
 @media only screen and (max-width: 400px){
     header .presentation {
         h1{
-            font-size: 45px;
+            font-size: 2.75em;
         }
 
         h2{
-            font-size: 22px;
-        }
-    }
-
-    .more-projects-container{
-        margin-right: 12px;
-        margin-left: 12px;
-        a{
-            font-size: 20px;
+            font-size: 1.375em;
         }
     }
 } 
 
 @media only screen and (max-width: 340px){
     section h2{
-        font-size: 30px;
+        font-size: 1.875em;
     }
 
     #portfolio .project-info h4{
-        font-size: 25px;
+        font-size: 1.5em;
     }   
 
     #about{
         .about-me h2::after{
-            @include titlesBorder(150px);
+            @include titlesBorder(9.375rem);
         }
 
         .my-skills h3{
-            font-size: 25px;
+            font-size: 1.5em;
         }
     }
 
     #services h2::after{
-        @include titlesBorder(134px);
+        @include titlesBorder(8.375rem);
     }
 
     #portfolio h2::after{
-        @include titlesBorder(136px);
+        @include titlesBorder(8.5rem);
     }
 
     #contact h2::after{
-        @include titlesBorder(180px);
+        @include titlesBorder(11.25rem);
     }
 
     .navbar .navbar-brand{
-        font-size: 20px;
+        font-size: 1.25em;
     }
 }
 
 @media only screen and (max-width: 303px){
     header .presentation {
         h1{
-            font-size: 39px;
+            font-size: 2.375em;
         }
 
         h2{
-            font-size: 20px;
+            font-size: 1.25em;
         }
     }
 
     #contact .info-item{
-        padding: 36px;
+        padding: 2.25rem;
     }
 
     #portfolio .project .project-img{
-        width: 210px;
-        height: 460px;
+        width: 13.125rem;
+        height: 28.75rem;
     }
 }

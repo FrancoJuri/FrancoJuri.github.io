@@ -8,6 +8,9 @@ const gifExpertAppImg = document.querySelector('.gif-expert-app-generator-img');
 document.addEventListener('DOMContentLoaded', () => {
     responsiveValidation();
     scrollValidation();
+    const copyrightYear = new Date().getFullYear();
+    const copyrightYearText = document.getElementById('copyright-year');
+    copyrightYearText.textContent = copyrightYear;
 });
 
 document.addEventListener('scroll', scrollValidation);
