@@ -345,6 +345,10 @@ section h2 {
   background: #4062bb;
   margin: 0.625rem auto 1.25rem;
 }
+#contact h3 {
+  font-weight: 600;
+  color: #363636;
+}
 #contact p {
   font-size: 1.25em;
   line-height: 1.875rem;
@@ -388,6 +392,45 @@ section h2 {
   text-align: center;
   margin-bottom: 0.9375rem;
 }
+#contact .contact-form {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+#contact .contact-form div input {
+  width: 55%;
+}
+#contact .contact-form div select {
+  width: 45%;
+}
+#contact .contact-form input[type=text], #contact .contact-form input[type=email], #contact .contact-form textarea, #contact .contact-form select {
+  width: 100%;
+  outline: none;
+  border: 2px solid rgb(111, 111, 111);
+  padding: 0.75rem;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.25s;
+}
+#contact .contact-form textarea {
+  min-height: 4.75rem;
+  max-height: 50vh;
+}
+#contact .contact-form input[type=submit] {
+  border-radius: 0px;
+  border: 2px solid #4062bb;
+  font-family: "Poppins", sans-serif;
+  transition: all 200ms !important;
+  color: #4062bb;
+  font-weight: 600;
+  padding: 0.75rem 5rem;
+}
+#contact .contact-form input[type=submit]:hover {
+  background: #4062bb;
+  color: white;
+}
 
 footer {
   background-color: #1B1B1B;
@@ -404,6 +447,45 @@ footer p {
   color: #c6c6c6;
 }
 
+.alerts-container {
+  display: flex;
+  flex-flow: row wrap;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.alert {
+  animation: animation-alert 400ms ease;
+  width: 100%;
+  border-radius: 0px;
+  padding-top: 1.25rem;
+  padding-bottom: 0.3125rem;
+  transition: all 300ms;
+  margin-bottom: 0;
+  z-index: 1000;
+}
+
+@keyframes animation-alert {
+  from {
+    transform: translateY(5rem);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+.animation-eliminate-alert {
+  animation: animation-eliminate-alert 400ms forwards;
+}
+
+@keyframes animation-eliminate-alert {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(5rem);
+  }
+}
 @media only screen and (max-width: 1200px) {
   #about .my-skills {
     width: 100%;
@@ -527,6 +609,13 @@ footer p {
   }
   header .presentation h2 {
     font-size: 1.375em;
+  }
+
+  #contact .contact-form div input {
+    width: 50%;
+  }
+  #contact .contact-form div select {
+    width: 60%;
   }
 }
 @media only screen and (max-width: 340px) {

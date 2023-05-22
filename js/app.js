@@ -60,3 +60,101 @@ function changeImgs(){
         gifExpertAppImg.src = '../assets/images/gif-expert-app.webp';
     }
 }
+
+// CONTACT FORM (EMAIL JS);
+const inputs = document.querySelectorAll('input');
+inputs.forEach(input => {
+    input.addEventListener('focus', () => {
+        input.style.borderColor = '#4062bb';
+    })
+    input.addEventListener('blur', () => {
+        if(input.value !== ''){
+            input.style.borderColor = '#4062bb';
+        } else {
+            input.style.borderColor = 'rgb(111, 111, 111)';
+        }
+    })
+})
+
+const textarea = document.querySelector('textarea');
+textarea.addEventListener('focus', () => {
+    textarea.style.borderColor = '#4062bb';
+})
+textarea.addEventListener('blur', () => {
+    if(textarea.value !== ''){
+        textarea.style.borderColor = '#4062bb';
+    } else{
+        textarea.style.borderColor = 'rgb(111, 111, 111)';
+    }
+})
+
+const select = document.querySelector('select');
+select.addEventListener('focus', () => {
+    select.style.borderColor = '#4062bb';
+})
+select.addEventListener('blur', () => {
+    if(select.value !== ''){
+        select.style.borderColor = '#4062bb';
+    } else{
+        select.style.borderColor = 'rgb(111, 111, 111)';
+    }
+})
+
+function throwAlert(type, msg){
+    const alertsContainer = document.querySelector('.alerts-container');
+    const isAlert = document.querySelector('.alert');
+    const wspBtn = document.getElementById('whatsapp-fixed-btn');
+
+    if(isAlert){
+        return;
+    }
+
+    wspBtn.style.visibility = 'hidden';
+    const alert = document.createElement('div');
+    alert.classList.add('alert', `alert-${type}`, 'fade', 'show');
+    const p = document.createElement('p');
+    p.classList.add('text-center', 'container', 'poppins-font');
+    p.textContent = msg;
+    alert.appendChild(p);
+    alertsContainer.appendChild(alert);
+    setTimeout(() => {
+        alert.classList.add('animation-eliminate-alert');
+        setTimeout(() => {
+            alert.remove();
+            wspBtn.style.visibility = 'visible';
+        }, 400)
+    }, 3000)
+}
+
+const submitFormBtn = document.querySelector('.contact-form input[type=submit]');
+const form = document.querySelector('.contact-form');
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const htmlTag = document.querySelector('html');
+
+    htmlTag.lang === 'es' ? submitFormBtn.value = 'Enviando...' : submitFormBtn.value = 'Sending...';
+
+    const serviceID = 'default_service';
+    const templateID = 'template_2sg6jsj';
+
+    emailjs.sendForm(serviceID, templateID, e.target)
+    .then(() => {
+        let msg;
+        htmlTag.lang === 'es' ? msg = 'Mail enviado correctamente, te responderé a la brevedad!' : msg = 'Email sent successfully, I will answer you as soon as possible!';
+        htmlTag.lang === 'es' ? submitFormBtn.value = 'Enviar Mail' : submitFormBtn.value = 'Send Email';
+        throwAlert('success', msg);
+        form.reset();
+        inputs.forEach(input => {
+            input.style.borderColor = 'rgb(111, 111, 111)';
+        })
+        textarea.style.borderColor = 'rgb(111, 111, 111)';
+        select.style.borderColor = 'rgb(111, 111, 111)';
+    }, () => {
+        let errorMsg;
+        htmlTag.lang === 'es' ? errorMsg = 'No se pudo enviar el mail, intenta contactarme por otro medio!' : errorMsg = 'Email could not be sent, try to contact me by another means!'
+        htmlTag.lang === 'es' ? submitFormBtn.value = 'Enviar Mail' : submitFormBtn.value = 'Send Email';
+        throwAlert('danger', errorMsg);
+    })
+})
+

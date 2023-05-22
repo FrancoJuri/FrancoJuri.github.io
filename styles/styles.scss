@@ -418,6 +418,11 @@ section{
         @include titlesBorder(15.125rem);
     }
 
+    h3{
+        font-weight: 600;
+        color: lighten($color: #000000, $amount: 21%);
+    }
+
     p{
         font-size: 1.25em;
         line-height: 1.875rem;
@@ -439,6 +444,45 @@ section{
     .info-item{
         @include boxItem(3.125rem, 3.125rem, 1.25rem 0rem, 1.5rem, .9375rem);
     }
+
+    .contact-form{
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
+
+        div{
+            input{
+                width: 55%;
+            }
+
+            select{
+                width: 45%;
+            }
+        }
+        
+        input[type=text], input[type=email], textarea, select{
+            width: 100%;
+            outline: none;
+            border: 2px solid rgb(111, 111, 111);
+            padding: .75rem;
+            font-family: $poppins-font;
+            transition: all .25s;
+        }
+
+        textarea{
+            min-height: 4.75rem;
+            max-height: 50vh
+        }
+
+        input[type=submit]{
+            @include button();
+            padding: .75rem 5rem;
+        }
+    }
+      
 }
 
 // Footer
@@ -460,8 +504,45 @@ footer{
     }
 }
 
+.alerts-container{
+    display: flex;
+    flex-flow: row wrap;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
 
+.alert{
+    animation: animation-alert 400ms ease;
+    width: 100%;
+    border-radius: 0px;
+    padding-top: 1.25rem;
+    padding-bottom: .3125rem;
+    transition: all 300ms;
+    margin-bottom: 0;
+    z-index: 1000;
+}
 
+@keyframes animation-alert{
+    from{
+        transform: translateY(5rem);
+    } 
+    to{
+        transform: translateY(0px);
+    }
+}
+
+.animation-eliminate-alert{
+    animation: animation-eliminate-alert 400ms forwards;
+}
+
+@keyframes animation-eliminate-alert{
+    from{
+        transform: translateY(0px);
+    } to{
+        transform: translateY(5rem);
+    }
+}
 
 
 // media queries
@@ -597,6 +678,16 @@ footer{
 
         h2{
             font-size: 1.375em;
+        }
+    }
+
+    #contact .contact-form div{
+        input{
+            width: 50%;
+        }
+        
+        select{
+            width: 60%;
         }
     }
 } 

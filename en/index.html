@@ -359,12 +359,33 @@
         </p>
       </div>
 
+      <form class="contact-form m-auto mt-4 col-lg-8 col-12">
+
+        <div class="w-100 d-flex justify-content-between gap-3">
+          <input type="text" placeholder="Name" name="from_name" required>
+          <select name="country" required>
+            <option value="" selected disabled hidden>Country</option>
+            <option>Argentina</option>
+            <option>Other</option>
+          </select>
+        </div>
+      
+        <input type="email" placeholder="Email"  name="email_id" required>
+      
+        <textarea placeholder="Your Message..." name="message" required></textarea>
+      
+        <input class="btn" type="submit" value="Send Email">
+
+      </form>
+
+      <h3 class="text-center poppins-font container mt-5 mb-5">You can also contact me through:</h3>
+
       <div class="info-container mt-4">
 
-        <a href="mailto:franco.developercontact@gmail.com" data-aos="fade-up" data-aos-duration="800">
+        <a href="https://wa.link/inrbh8" target="_blank" data-aos="fade-up" data-aos-duration="800">
           <div class="info-item">
-            <i class="fas fa-paper-plane"></i>
-            <h3>Mail Me</h3>
+            <i class="fab fa-whatsapp"></i>
+            <h3>WhatsApp</h3>
           </div>
         </a>
 
@@ -393,6 +414,8 @@
         All rights reserved
       </p>
     </footer>
+
+    <div class="alerts-container"></div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
