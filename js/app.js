@@ -2,7 +2,7 @@ const navbar = document.querySelector('.navbar');
 const navbarContainer = document.querySelector('.navbar-container');
 const freeGamesImg = document.querySelector('.free-games-img');
 const weatherAppImg = document.querySelector('.weather-app-img');
-const todoAppImg = document.querySelector('.todo-app-img');
+const palmerusEs = document.querySelector('.palmerus-es-img');
 const gifExpertAppImg = document.querySelector('.gif-expert-app-generator-img');
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -51,12 +51,12 @@ function changeImgs(){
     if(window.matchMedia('(max-width: 767px)').matches){
         freeGamesImg.src = '../assets/images/free-games-app-responsive.webp';
         weatherAppImg.src = '../assets/images/weather-app-responsive.webp';
-        todoAppImg.src = '../assets/images/todo-app-responsive.webp';
+        palmerusEs.src = '../assets/images/palmerus-es-responsive.webp';
         gifExpertAppImg.src = '../assets/images/gif-expert-app-responsive.webp';
     } else {
         freeGamesImg.src = '../assets/images/free-games-app.webp';
         weatherAppImg.src = '../assets/images/weather-app.webp';
-        todoAppImg.src = '../assets/images/todo-app.webp';
+        palmerusEs.src = '../assets/images/palmerus-es.webp';
         gifExpertAppImg.src = '../assets/images/gif-expert-app.webp';
     }
 }
