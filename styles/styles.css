@@ -27,6 +27,10 @@ body::-webkit-scrollbar-thumb:hover {
   background: rgb(133, 133, 133);
 }
 
+h1, h2 {
+  text-wrap: balance;
+}
+
 #whatsapp-fixed-btn {
   display: flex;
   justify-content: center;
@@ -35,8 +39,8 @@ body::-webkit-scrollbar-thumb:hover {
   font-size: 2.5em;
   width: 4rem;
   height: 4rem;
-  right: 2rem;
-  bottom: 2rem;
+  right: 3.5rem;
+  bottom: 3.5rem;
   border-radius: 50%;
   background-color: #50F06C;
   color: white;
@@ -155,14 +159,16 @@ section h2 {
 #about .about-me p {
   font-size: 1.125em;
   line-height: 2rem;
+  text-wrap: balance;
 }
 #about .about-me h2::after {
   content: "";
   display: block;
-  width: 12.1875rem;
-  height: 0.3125rem;
+  width: 5rem;
+  height: 0.375rem;
   background: #4062bb;
   margin: 0.625rem auto 1.25rem;
+  border-radius: 12px;
 }
 #about .my-skills h3 {
   font-size: 1.875em;
@@ -175,13 +181,16 @@ section h2 {
   align-items: center;
 }
 #about .my-skills .skills-item {
-  width: 12.5rem;
+  width: 10.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1.25rem;
-  padding: 2.125rem;
+  gap: 1rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
   background-color: #eaeaea;
 }
 #about .my-skills .skills-item span {
@@ -191,15 +200,20 @@ section h2 {
 }
 #about .my-skills .skills-item svg {
   font-size: 3.125em;
+  height: 50px;
+}
+#about .my-skills .skills-item img {
+  height: 50px;
 }
 
 #services h2::after {
   content: "";
   display: block;
-  width: 11.25rem;
-  height: 0.3125rem;
+  width: 5rem;
+  height: 0.375rem;
   background: #4062bb;
   margin: 0.625rem auto 1.25rem;
+  border-radius: 12px;
 }
 #services .services-container {
   display: grid;
@@ -244,10 +258,11 @@ section h2 {
 #portfolio h2::after {
   content: "";
   display: block;
-  width: 11.5625rem;
-  height: 0.3125rem;
+  width: 5rem;
+  height: 0.375rem;
   background: #4062bb;
   margin: 0.625rem auto 1.25rem;
+  border-radius: 12px;
 }
 #portfolio .projects-container {
   display: flex;
@@ -263,7 +278,7 @@ section h2 {
   width: 60%;
   height: auto;
   border-radius: 0.75rem;
-  box-shadow: 0 13px 27px -5px hsla(240deg, 30%, 28%, 0.25), 0 8px 16px -8px hsla(0deg, 0%, 0%, 0.3), 0 -6px 16px -6px hsla(0deg, 0%, 0%, 0.03);
+  box-shadow: 0 13px 27px -5px hsla(240, 30%, 28%, 0.25), 0 8px 16px -8px hsla(0, 0%, 0%, 0.3), 0 -6px 16px -6px hsla(0, 0%, 0%, 0.03);
   order: 1;
 }
 #portfolio .project-info {
@@ -280,6 +295,7 @@ section h2 {
   font-size: 1.875em;
 }
 #portfolio .project-info p {
+  text-wrap: balance;
   font-family: "Poppins", sans-serif;
   font-size: 1.125em;
 }
@@ -340,10 +356,11 @@ section h2 {
 #contact h2::after {
   content: "";
   display: block;
-  width: 15.125rem;
-  height: 0.3125rem;
+  width: 5rem;
+  height: 0.375rem;
   background: #4062bb;
   margin: 0.625rem auto 1.25rem;
+  border-radius: 12px;
 }
 #contact h3 {
   font-weight: 600;
@@ -490,7 +507,6 @@ footer p {
   #about .my-skills {
     width: 100%;
   }
-
   #services .services-container {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -520,7 +536,6 @@ footer p {
   #portfolio .project-info p {
     text-align: center;
   }
-
   #contact .info-container {
     grid-template-columns: 1fr;
   }
@@ -529,11 +544,19 @@ footer p {
   #services .services-container {
     grid-template-columns: 1fr;
   }
-
   #portfolio .project .project-img {
     width: 15.625rem;
     height: 31.25rem;
     box-shadow: none;
+  }
+  header {
+    background-attachment: initial;
+  }
+  #about .my-skills .skills-item {
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
 }
 @media only screen and (max-width: 600px) {
@@ -544,63 +567,42 @@ footer p {
     font-size: 1.5em;
   }
 }
-@media only screen and (max-width: 475px) {
+@media only screen and (max-width: 575px) {
   section h2 {
     font-size: 2.25em;
-  }
-
-  #about .about-me h2::after {
-    content: "";
-    display: block;
-    width: 11.25rem;
-    height: 0.3125rem;
-    background: #4062bb;
-    margin: 0.625rem auto 1.25rem;
   }
   #about .my-skills h3 {
     font-size: 1.75em;
   }
-
-  #services h2::after {
-    content: "";
-    display: block;
-    width: 10rem;
-    height: 0.3125rem;
-    background: #4062bb;
-    margin: 0.625rem auto 1.25rem;
-  }
-
-  #portfolio h2::after {
-    content: "";
-    display: block;
-    width: 10.3125rem;
-    height: 0.3125rem;
-    background: #4062bb;
-    margin: 0.625rem auto 1.25rem;
-  }
-
-  #contact h2::after {
-    content: "";
-    display: block;
-    width: 13.625rem;
-    height: 0.3125rem;
-    background: #4062bb;
-    margin: 0.625rem auto 1.25rem;
-  }
-
   #whatsapp-fixed-btn {
-    right: 1.75rem;
-    bottom: 1.75rem;
-    width: 3.75rem;
-    height: 3.75rem;
+    right: 2.75rem;
+    bottom: 3rem;
+    width: 4rem;
+    height: 4rem;
   }
-
   html, body {
     font-size: 14px;
   }
-
   #contact p {
     font-size: 1.15rem;
+  }
+}
+@media only screen and (max-width: 503px) {
+  #about .my-skills .skills-container {
+    gap: 1rem;
+  }
+  #about .my-skills .skills-item {
+    width: 9rem;
+    padding-right: 0px;
+    padding-left: 0px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  #about .my-skills .skills-item svg {
+    height: 30px;
+  }
+  #about .my-skills .skills-item img {
+    height: 30px;
   }
 }
 @media only screen and (max-width: 400px) {
@@ -610,7 +612,6 @@ footer p {
   header .presentation h2 {
     font-size: 1.375em;
   }
-
   #contact .contact-form div input {
     width: 50%;
   }
@@ -622,52 +623,19 @@ footer p {
   section h2 {
     font-size: 1.875em;
   }
-
   #portfolio .project-info h4 {
     font-size: 1.5em;
-  }
-
-  #about .about-me h2::after {
-    content: "";
-    display: block;
-    width: 9.375rem;
-    height: 0.3125rem;
-    background: #4062bb;
-    margin: 0.625rem auto 1.25rem;
   }
   #about .my-skills h3 {
     font-size: 1.5em;
   }
-
-  #services h2::after {
-    content: "";
-    display: block;
-    width: 8.375rem;
-    height: 0.3125rem;
-    background: #4062bb;
-    margin: 0.625rem auto 1.25rem;
-  }
-
-  #portfolio h2::after {
-    content: "";
-    display: block;
-    width: 8.5rem;
-    height: 0.3125rem;
-    background: #4062bb;
-    margin: 0.625rem auto 1.25rem;
-  }
-
-  #contact h2::after {
-    content: "";
-    display: block;
-    width: 11.25rem;
-    height: 0.3125rem;
-    background: #4062bb;
-    margin: 0.625rem auto 1.25rem;
-  }
-
   .navbar .navbar-brand {
     font-size: 1.25em;
+  }
+}
+@media only screen and (max-width: 335px) {
+  #about .my-skills .skills-container {
+    gap: 0.75rem;
   }
 }
 @media only screen and (max-width: 303px) {
@@ -677,14 +645,19 @@ footer p {
   header .presentation h2 {
     font-size: 1.25em;
   }
-
   #contact .info-item {
     padding: 2.25rem;
   }
-
   #portfolio .project .project-img {
     width: 13.125rem;
     height: 28.75rem;
+  }
+}
+@media only screen and (max-width: 283px) {
+  #about .my-skills .skills-item {
+    width: 8.25rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
   }
 }
 

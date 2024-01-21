@@ -36,6 +36,10 @@ body::-webkit-scrollbar-thumb:hover {
     background: rgb(133, 133, 133);
 }
 
+h1,h2{
+    text-wrap: balance;
+}
+
 #whatsapp-fixed-btn{
     display: flex;
     justify-content: center;
@@ -44,8 +48,8 @@ body::-webkit-scrollbar-thumb:hover {
     font-size: 2.5em;
     width: 4rem;
     height: 4rem;
-    right: 2rem;
-    bottom: 2rem;
+    right: 3.5rem;
+    bottom: 3.5rem;
     border-radius: 50%;
     background-color: #50F06C;
     color: white;
@@ -64,13 +68,14 @@ body::-webkit-scrollbar-thumb:hover {
 
 // titles border mixin
 
-@mixin titlesBorder($width){
+@mixin titlesBorder(){
     content: "";
     display: block;
-    width: $width;
-    height: .3125rem;
+    width: 5rem;
+    height: .375rem;
     background: $principal-color;
     margin: .625rem auto 1.25rem;
+    border-radius: 12px;
 }
 
 // box Item mixin
@@ -250,10 +255,11 @@ section{
         p{
             font-size: 1.125em;
             line-height: 2rem;
+            text-wrap: balance;
         }
 
         h2::after{
-            @include titlesBorder(12.1875rem);
+            @include titlesBorder();
         }
     }
 
@@ -272,13 +278,16 @@ section{
         }
 
         .skills-item{
-            width: 12.5rem;
+            width: 10.5rem;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            gap: 1.25rem;
-            padding: 2.125rem;
+            gap: 1rem;
+            padding-right: 1rem;
+            padding-left: 1rem;
+            padding-top: 1.25rem;
+            padding-bottom: 1.25rem;
             background-color: $gray-color;
 
             span{
@@ -289,7 +298,13 @@ section{
 
             svg{
                 font-size: 3.125em;
+                height: 50px;
             }
+
+            img{
+                height: 50px;
+            }
+
         }
 
     }
@@ -301,7 +316,7 @@ section{
 #services{
 
     h2::after{
-        @include titlesBorder(11.25rem);
+        @include titlesBorder();
     }
 
     .services-container{
@@ -326,7 +341,7 @@ section{
 
 #portfolio{
     h2::after{
-        @include titlesBorder(11.5625rem);
+        @include titlesBorder();
     }
 
     .projects-container{
@@ -364,6 +379,7 @@ section{
         }
 
         p{
+            text-wrap: balance;
             font-family: $poppins-font;
             font-size: 1.125em;
 
@@ -415,7 +431,7 @@ section{
     padding-bottom: 5.625rem;
 
     h2::after{
-        @include titlesBorder(15.125rem);
+        @include titlesBorder();
     }
 
     h3{
@@ -612,6 +628,21 @@ footer{
         height: 31.25rem;
         box-shadow: none;
     }
+
+    header{
+        background-attachment: initial;
+    }
+
+    #about {
+        .my-skills{
+            .skills-item{
+                padding-right: .75rem;
+                padding-left: .75rem;
+                padding-top: 1rem;
+                padding-bottom: 1rem;
+            }
+        }
+    }
     
 }
 
@@ -627,38 +658,22 @@ footer{
     } 
 }
 
-@media only screen and (max-width: 475px){
+@media only screen and (max-width: 575px){
     section h2{
         font-size: 2.25em;
     }
 
     #about{
-        .about-me h2::after{
-            @include titlesBorder(11.25rem);
-        }
-
         .my-skills h3{
             font-size: 1.75em;
         }
     }
 
-    #services h2::after{
-        @include titlesBorder(10rem);
-    }
-
-    #portfolio h2::after{
-        @include titlesBorder(10.3125rem);
-    }
-
-    #contact h2::after{
-        @include titlesBorder(13.625rem);
-    }
-
     #whatsapp-fixed-btn{
-        right: 1.75rem;
-        bottom: 1.75rem;
-        width: 3.75rem;
-        height: 3.75rem;
+        right: 2.75rem;
+        bottom: 3rem;
+        width: 4rem;
+        height: 4rem;
     }
 
     html, body{
@@ -667,6 +682,32 @@ footer{
 
     #contact p{
         font-size: 1.15rem;
+    }
+}
+
+@media only screen and (max-width: 503px){
+    #about {
+        .my-skills{
+            .skills-container{
+                gap: 1rem;
+            }
+                
+            .skills-item{
+                width: 9rem;
+                padding-right: 0px;
+                padding-left: 0px;
+                padding-top: 1rem;
+                padding-bottom: 1rem;
+
+                svg{
+                    height: 30px;
+                }
+
+                img{
+                    height: 30px;
+                }
+            }
+        }
     }
 }
 
@@ -702,29 +743,24 @@ footer{
     }   
 
     #about{
-        .about-me h2::after{
-            @include titlesBorder(9.375rem);
-        }
-
         .my-skills h3{
             font-size: 1.5em;
         }
-    }
 
-    #services h2::after{
-        @include titlesBorder(8.375rem);
-    }
-
-    #portfolio h2::after{
-        @include titlesBorder(8.5rem);
-    }
-
-    #contact h2::after{
-        @include titlesBorder(11.25rem);
     }
 
     .navbar .navbar-brand{
         font-size: 1.25em;
+    }
+}
+
+@media only screen and (max-width: 335px){
+    #about {
+        .my-skills{
+            .skills-container{
+                gap: .75rem;
+            }
+        }
     }
 }
 
@@ -746,5 +782,13 @@ footer{
     #portfolio .project .project-img{
         width: 13.125rem;
         height: 28.75rem;
+    }
+}
+
+@media only screen and (max-width: 283px){
+    #about .my-skills .skills-item{
+        width: 8.25rem;
+        padding-top: .75rem;
+        padding-bottom: .75rem;
     }
 }
