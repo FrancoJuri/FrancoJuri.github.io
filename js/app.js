@@ -1,9 +1,9 @@
 const navbar = document.querySelector('.navbar');
 const navbarContainer = document.querySelector('.navbar-container');
 const freeGamesImg = document.querySelector('.free-games-img');
-const weatherAppImg = document.querySelector('.weather-app-img');
+const meeurhaApp = document.querySelector('.meeurha-com-img');
 const palmerusEs = document.querySelector('.palmerus-es-img');
-const gifExpertAppImg = document.querySelector('.gif-expert-app-generator-img');
+const calendarAppImg = document.querySelector('.calendar-app-img');
 
 document.addEventListener('DOMContentLoaded', () => {
     responsiveValidation();
@@ -50,14 +50,14 @@ function responsiveValidation(){
 function changeImgs(){
     if(window.matchMedia('(max-width: 767px)').matches){
         freeGamesImg.src = '../assets/images/free-games-app-responsive.webp';
-        weatherAppImg.src = '../assets/images/weather-app-responsive.webp';
+        meeurhaApp.src = '../assets/images/meeurha-com-responsive.webp';
         palmerusEs.src = '../assets/images/palmerus-es-responsive.webp';
-        gifExpertAppImg.src = '../assets/images/gif-expert-app-responsive.webp';
+        calendarAppImg.src = '../assets/images/calendar-app-responsive.webp';
     } else {
         freeGamesImg.src = '../assets/images/free-games-app.webp';
-        weatherAppImg.src = '../assets/images/weather-app.webp';
+        meeurhaApp.src = '../assets/images/meeurha-com.webp';
         palmerusEs.src = '../assets/images/palmerus-es.webp';
-        gifExpertAppImg.src = '../assets/images/gif-expert-app.webp';
+        calendarAppImg.src = '../assets/images/calendar-app.webp';
     }
 }
 

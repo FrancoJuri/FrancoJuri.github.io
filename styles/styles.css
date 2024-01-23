@@ -56,6 +56,30 @@ h1, h2 {
   background-color: white;
 }
 
+#whatsapp-large-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  gap: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 1rem;
+  padding-right: 1.25rem;
+  padding-left: 1.25rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  outline: none;
+  background-color: #25d366;
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+  transition: 800ms;
+}
+#whatsapp-large-btn:hover {
+  transition: 0.25s;
+  background-color: #1c9b4a;
+}
+
 .montserrat-font {
   font-family: "Montserrat", sans-serif;
 }
@@ -272,6 +296,7 @@ section h2 {
 #portfolio .project {
   display: flex;
   flex-flow: row nowrap;
+  align-items: center;
   gap: 5rem;
 }
 #portfolio .project .project-img {
@@ -286,6 +311,7 @@ section h2 {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+  align-self: flex-start;
   gap: 1.25rem;
   width: 40%;
 }
@@ -369,6 +395,7 @@ section h2 {
 #contact p {
   font-size: 1.25em;
   line-height: 1.875rem;
+  text-wrap: balance;
 }
 #contact a {
   text-decoration: none;
