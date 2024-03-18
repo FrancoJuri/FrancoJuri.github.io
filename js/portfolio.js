@@ -7,6 +7,7 @@ const lazerwebCursoImg = document.querySelector('.lazerweb-curso-img');
 const weatherAppImg = document.querySelector('.weather-app-img');
 const gifExpertAppImg = document.querySelector('.gif-expert-app-img');
 const todoAppImg = document.querySelector('.todo-app-img');
+const redmondLawImg = document.querySelector('.redmond-law-img');
 
 document.addEventListener('DOMContentLoaded', changeImgs);
 
@@ -21,6 +22,7 @@ function changeImgs(){
         weatherAppImg.src = '../assets/images/weather-app-responsive.webp';
         gifExpertAppImg.src = '../assets/images/gif-expert-app-responsive.webp';
         todoAppImg.src = '../assets/images/todo-app-responsive.webp';
+        redmondLawImg.src = '../assets/images/redmond-law-responsive.webp';
     } else {
         freeGamesImg.src = '../assets/images/free-games-app.webp';
         meeurhaApp.src = '../assets/images/meeurha-com.webp';
@@ -31,6 +33,7 @@ function changeImgs(){
         weatherAppImg.src = '../assets/images/weather-app.webp';
         gifExpertAppImg.src = '../assets/images/gif-expert-app.webp';
         todoAppImg.src = '../assets/images/todo-app.webp';
+        redmondLawImg.src = '../assets/images/redmond-law.webp';
     }
 
     const copyrightYear = new Date().getFullYear();
