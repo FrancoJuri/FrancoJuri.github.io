@@ -8,6 +8,7 @@ const weatherAppImg = document.querySelector('.weather-app-img');
 const gifExpertAppImg = document.querySelector('.gif-expert-app-img');
 const todoAppImg = document.querySelector('.todo-app-img');
 const redmondLawImg = document.querySelector('.redmond-law-img');
+const fontanBalestraImg = document.querySelector('.fontan-balestra-img');
 
 document.addEventListener('DOMContentLoaded', changeImgs);
 
@@ -23,6 +24,7 @@ function changeImgs(){
         gifExpertAppImg.src = '../assets/images/gif-expert-app-responsive.webp';
         todoAppImg.src = '../assets/images/todo-app-responsive.webp';
         redmondLawImg.src = '../assets/images/redmond-law-responsive.webp';
+        fontanBalestraImg.src = '../assets/images/fontan-balestra-responsive.webp';
     } else {
         freeGamesImg.src = '../assets/images/free-games-app.webp';
         meeurhaApp.src = '../assets/images/meeurha-com.webp';
@@ -34,6 +36,7 @@ function changeImgs(){
         gifExpertAppImg.src = '../assets/images/gif-expert-app.webp';
         todoAppImg.src = '../assets/images/todo-app.webp';
         redmondLawImg.src = '../assets/images/redmond-law.webp';
+        fontanBalestraImg.src = '../assets/images/fontan-balestra.webp';
     }
 
     const copyrightYear = new Date().getFullYear();
