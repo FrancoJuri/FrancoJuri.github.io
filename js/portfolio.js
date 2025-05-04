@@ -9,6 +9,11 @@ const gifExpertAppImg = document.querySelector('.gif-expert-app-img');
 const todoAppImg = document.querySelector('.todo-app-img');
 const redmondLawImg = document.querySelector('.redmond-law-img');
 const fontanBalestraImg = document.querySelector('.fontan-balestra-img');
+const legaldocImg = document.querySelector('.legaldoc-img');
+const emiumiAppImg = document.querySelector('.emiumi-app-img');
+const ialfinanzasImg = document.querySelector('.ialfinanzas-img');
+const densoTechnologyImg = document.querySelector('.denso-technology-img');
+
 
 document.addEventListener('DOMContentLoaded', changeImgs);
 
@@ -25,6 +30,10 @@ function changeImgs(){
         todoAppImg.src = '../assets/images/todo-app-responsive.webp';
         redmondLawImg.src = '../assets/images/redmond-law-responsive.webp';
         fontanBalestraImg.src = '../assets/images/fontan-balestra-responsive.webp';
+        legaldocImg.src = '../assets/images/legaldoc-responsive.webp';
+        emiumiAppImg.src = '../assets/images/emiumi-app-responsive.webp';
+        ialfinanzasImg.src = '../assets/images/ialfinanzas-responsive.webp';
+        densoTechnologyImg.src = '../assets/images/denso-technology-responsive.webp';
     } else {
         freeGamesImg.src = '../assets/images/free-games-app.webp';
         meeurhaApp.src = '../assets/images/meeurha-com.webp';
@@ -37,6 +46,10 @@ function changeImgs(){
         todoAppImg.src = '../assets/images/todo-app.webp';
         redmondLawImg.src = '../assets/images/redmond-law.webp';
         fontanBalestraImg.src = '../assets/images/fontan-balestra.webp';
+        legaldocImg.src = '../assets/images/legaldoc.webp';
+        emiumiAppImg.src = '../assets/images/emiumi-app.webp';
+        ialfinanzasImg.src = '../assets/images/ialfinanzas.webp';
+        densoTechnologyImg.src = '../assets/images/denso-technology.webp';
     }
 
     const copyrightYear = new Date().getFullYear();
