@@ -1,9 +1,9 @@
 const navbar = document.querySelector('.navbar');
 const navbarContainer = document.querySelector('.navbar-container');
-const freeGamesImg = document.querySelector('.free-games-img');
+const emiumiApp = document.querySelector('.emiumi-app-img');
 const meeurhaApp = document.querySelector('.meeurha-com-img');
 const palmerusEs = document.querySelector('.palmerus-es-img');
-const fontanBalestra = document.querySelector('.fontan-balestra-img');
+const legalDocImg = document.querySelector('.legaldoc-img');
 
 document.addEventListener('DOMContentLoaded', () => {
     responsiveValidation();
@@ -49,15 +49,15 @@ function responsiveValidation(){
 
 function changeImgs(){
     if(window.matchMedia('(max-width: 767px)').matches){
-        freeGamesImg.src = '../assets/images/free-games-app-responsive.webp';
+        emiumiApp.src = '../assets/images/emiumi-app-responsive.webp';
         meeurhaApp.src = '../assets/images/meeurha-com-responsive.webp';
         palmerusEs.src = '../assets/images/palmerus-es-responsive.webp';
-        fontanBalestra.src = '../assets/images/fontan-balestra-responsive.webp';
+        legalDocImg.src = '../assets/images/legaldoc-responsive.webp';
     } else {
-        freeGamesImg.src = '../assets/images/free-games-app.webp';
+        emiumiApp.src = '../assets/images/emiumi-app.webp';
         meeurhaApp.src = '../assets/images/meeurha-com.webp';
         palmerusEs.src = '../assets/images/palmerus-es.webp';
-        fontanBalestra.src = '../assets/images/fontan-balestra.webp';
+        legalDocImg.src = '../assets/images/legaldoc.webp';
     }
 }
 
