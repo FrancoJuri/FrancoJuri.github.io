@@ -354,16 +354,16 @@ section h2 {
   align-items: center;
 }
 #portfolio .financeapp-project {
-  gap: 1rem;
+  gap: 1rem !important;
 }
 #portfolio .financeapp-project-info {
-  width: 60%;
-  align-self: center;
+  width: 60% !important;
+  align-self: center !important;
 }
 #portfolio .project .financeapp-responsive-img {
-  width: 22.5%;
-  height: 22.5%;
-  box-shadow: none;
+  width: 22.5% !important;
+  height: 22.5% !important;
+  box-shadow: none !important;
 }
 
 .more-projects-container {
@@ -565,8 +565,8 @@ footer p {
     width: 100%;
   }
   #portfolio .project .financeapp-responsive-img {
-    width: 45%;
-    height: 45%;
+    width: 45% !important;
+    height: 45% !important;
   }
   #portfolio .project-info {
     justify-content: center;
@@ -591,8 +591,8 @@ footer p {
   }
 
   #portfolio .project .project-img {
-    width: 15.625rem;
-    height: 31.25rem;
+    width: 15.625rem !important;
+    height: 31.25rem !important;
     box-shadow: none;
   }
 
