@@ -303,7 +303,7 @@ section h2 {
   width: 60%;
   height: auto;
   border-radius: 0.75rem;
-  box-shadow: 0 13px 27px -5px hsla(240, 30%, 28%, 0.25), 0 8px 16px -8px hsla(0, 0%, 0%, 0.3), 0 -6px 16px -6px hsla(0, 0%, 0%, 0.03);
+  box-shadow: 0 13px 27px -5px hsla(240deg, 30%, 28%, 0.25), 0 8px 16px -8px hsla(0deg, 0%, 0%, 0.3), 0 -6px 16px -6px hsla(0deg, 0%, 0%, 0.03);
   order: 1;
 }
 #portfolio .project-info {
@@ -534,6 +534,7 @@ footer p {
   #about .my-skills {
     width: 100%;
   }
+
   #services .services-container {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -563,6 +564,7 @@ footer p {
   #portfolio .project-info p {
     text-align: center;
   }
+
   #contact .info-container {
     grid-template-columns: 1fr;
   }
@@ -571,14 +573,17 @@ footer p {
   #services .services-container {
     grid-template-columns: 1fr;
   }
+
   #portfolio .project .project-img {
     width: 15.625rem;
     height: 31.25rem;
     box-shadow: none;
   }
+
   header {
     background-attachment: initial;
   }
+
   #about .my-skills .skills-item {
     padding-right: 0.75rem;
     padding-left: 0.75rem;
@@ -598,18 +603,22 @@ footer p {
   section h2 {
     font-size: 2.25em;
   }
+
   #about .my-skills h3 {
     font-size: 1.75em;
   }
+
   #whatsapp-fixed-btn {
     right: 2.75rem;
     bottom: 3rem;
     width: 4rem;
     height: 4rem;
   }
+
   html, body {
     font-size: 14px;
   }
+
   #contact p {
     font-size: 1.15rem;
   }
@@ -639,6 +648,7 @@ footer p {
   header .presentation h2 {
     font-size: 1.375em;
   }
+
   #contact .contact-form div input {
     width: 50%;
   }
@@ -650,12 +660,15 @@ footer p {
   section h2 {
     font-size: 1.875em;
   }
+
   #portfolio .project-info h4 {
     font-size: 1.5em;
   }
+
   #about .my-skills h3 {
     font-size: 1.5em;
   }
+
   .navbar .navbar-brand {
     font-size: 1.25em;
   }
@@ -672,9 +685,11 @@ footer p {
   header .presentation h2 {
     font-size: 1.25em;
   }
+
   #contact .info-item {
     padding: 2.25rem;
   }
+
   #portfolio .project .project-img {
     width: 13.125rem;
     height: 28.75rem;
