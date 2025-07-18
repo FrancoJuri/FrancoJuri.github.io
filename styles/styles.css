@@ -353,6 +353,18 @@ section h2 {
   display: flex;
   align-items: center;
 }
+#portfolio .financeapp-project {
+  gap: 1rem;
+}
+#portfolio .financeapp-project-info {
+  width: 60%;
+  align-self: center;
+}
+#portfolio .project .financeapp-responsive-img {
+  width: 22.5%;
+  height: 22.5%;
+  box-shadow: none;
+}
 
 .more-projects-container {
   display: flex;
@@ -551,6 +563,10 @@ footer p {
   }
   #portfolio .project .project-img {
     width: 100%;
+  }
+  #portfolio .project .financeapp-responsive-img {
+    width: 45%;
+    height: 45%;
   }
   #portfolio .project-info {
     justify-content: center;

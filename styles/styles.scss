@@ -433,6 +433,21 @@ section{
         display: flex;
         align-items: center;
     }
+
+    .financeapp-project{
+        gap: 1rem;
+    }
+
+    .financeapp-project-info{
+        width: 60%;
+        align-self: center;
+    }
+
+    .project .financeapp-responsive-img{
+        width: 22.5%;
+        height: 22.5%;
+        box-shadow: none;
+    }
 }
 
 // More Projects Button
@@ -619,6 +634,11 @@ footer{
 
             .project-img{
                 width: 100%;
+            }
+
+            .financeapp-responsive-img{
+                width: 45%;
+                height: 45%;
             }
         }
 
