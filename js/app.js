@@ -11,6 +11,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const copyrightYear = new Date().getFullYear();
     const copyrightYearText = document.getElementById('copyright-year');
     copyrightYearText.textContent = copyrightYear;
+    
+    // Initialize tilt effect on project images
+    initProjectImageTilt();
 });
 
 document.addEventListener('scroll', scrollValidation);
@@ -59,6 +62,37 @@ function changeImgs(){
         palmerusEs.src = '../assets/images/palmerus-es.webp';
         legalDocImg.src = '../assets/images/legaldoc.webp';
     }
+}
+
+// Tilt effect for .project .project-img
+function initProjectImageTilt(){
+    // Only enable on devices with a fine pointer (avoid mobiles)
+    if(!window.matchMedia('(hover: hover) and (pointer: fine)').matches){
+        return;
+    }
+
+    const projectImages = document.querySelectorAll('.project .project-img');
+    projectImages.forEach((img) => {
+        img.style.transformStyle = 'preserve-3d';
+        img.style.willChange = 'transform';
+        img.style.transition = 'transform 300ms ease-out';
+
+        img.addEventListener('mousemove', (e) => {
+            const el = e.currentTarget;
+            const rect = el.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+
+            const xRotation = ((y - rect.height / 2) / rect.height) * -10;
+            const yRotation = ((x - rect.width / 2) / rect.width) * 10;
+
+            el.style.transform = `perspective(1000px) scale(1.02) rotateX(${xRotation}deg) rotateY(${yRotation}deg)`;
+        });
+
+        img.addEventListener('mouseleave', (e) => {
+            e.currentTarget.style.transform = 'perspective(1000px) rotateX(0) rotateY(0)';
+        });
+    });
 }
 
 // CONTACT FORM (EMAIL JS);
