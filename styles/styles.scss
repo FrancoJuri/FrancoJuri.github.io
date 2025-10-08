@@ -543,6 +543,168 @@ section{
       
 }
 
+
+// tiktok Modal
+/* Modal Overlay */
+.tiktok-modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.tiktok-modal-overlay.active {
+    display: flex;
+}
+
+/* Modal Container */
+.tiktok-modal {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    max-width: 28rem;
+    width: 100%;
+    overflow: hidden;
+    animation: modalSlideIn 0.3s ease-out;
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Header */
+.tiktok-modal-header {
+    background-color: $principal-color;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tiktok-modal-title {
+    color: white;
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.tiktok-modal-close {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 0.25rem;
+    display: flex;
+    align-items: center;
+    transition: color 0.2s;
+}
+
+.tiktok-modal-close:hover {
+    color: #d1d5db;
+}
+
+.tiktok-modal-close svg {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+/* Body */
+.tiktok-modal-body {
+    padding: 1.5rem;
+}
+
+.tiktok-modal-icon {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 4rem;
+}
+
+.tiktok-modal-text {
+    color: #374151;
+    font-size: 1.125rem;
+    line-height: 1.75;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+/* Instructions Box */
+.tiktok-instructions {
+    background-color: #dbeafe;
+    border-left: 4px solid #3b82f6;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    gap: 0.75rem;
+}
+
+.tiktok-instructions-icon {
+    flex-shrink: 0;
+    color: #3b82f6;
+}
+
+.tiktok-instructions-icon svg {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+.tiktok-instructions-content h3 {
+    color: $principal-color;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin: 0 0 0.5rem 0;
+}
+
+.tiktok-instructions-list {
+    color: $principal-color;
+    font-size: 0.875rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.tiktok-instructions-list li {
+    margin-bottom: 0.25rem;
+}
+
+/* Footer */
+.tiktok-modal-footer {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.tiktok-modal-btn {
+    padding: 0.5rem 1.5rem;
+    background-color: $principal-color;
+    color: white;
+    font-weight: 500;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.tiktok-modal-btn:hover {
+    background-color: #1e3a8a;
+}
+
+.tiktok-modal-btn:focus {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+}
+
+
+
 // Footer
 
 footer{
