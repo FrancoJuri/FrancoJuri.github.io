@@ -92,3 +92,79 @@ function initProjectImageTilt(){
         });
     });
 }
+
+
+// tiktok validation
+
+// Detectar si viene de TikTok
+function isFromTikTok() {
+    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+    const referrer = document.referrer.toLowerCase();
+    
+    // Verificar User Agent de TikTok
+    if (userAgent.toLowerCase().includes('tiktok') || userAgent.includes('musical_ly') || userAgent.includes('BytedanceWebview')) {
+        return true;
+    }
+    
+    // Verificar si viene de dominio TikTok
+    if (referrer.includes('tiktok.com')) {
+        return true;
+    }
+    
+    return false;
+}
+
+// Elementos del DOM
+const modal = document.getElementById('tiktokModal');
+const whatsappBtn = document.getElementById('whatsapp-fixed-btn');
+const whatsAppLargeBtn = document.getElementById('whatsapp-large-btn');
+const closeModalBtn = document.getElementById('closeModalBtn');
+const closeModal = document.getElementById('closeModal');
+
+// Función para abrir el modal
+function openModal() {
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+// Función para cerrar el modal
+function closeModalFn() {
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+}
+
+// Event listener para el botón de WhatsApp
+whatsappBtn.addEventListener('click', function(e) {
+    if (isFromTikTok()) {
+        e.preventDefault();
+        openModal();
+    }
+ 
+});
+
+// Event listener para el botón de WhatsApp
+whatsAppLargeBtn.addEventListener('click', function(e) {
+    if (isFromTikTok()) {
+        e.preventDefault();
+        openModal();
+    }
+ 
+});
+
+
+closeModalBtn.addEventListener('click', closeModalFn);
+closeModal.addEventListener('click', closeModalFn);
+
+// Cerrar al hacer clic fuera del modal
+modal.addEventListener('click', function(e) {
+    if (e.target === modal) {
+        closeModalFn();
+    }
+});
+
+// Cerrar con tecla ESC
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && modal.classList.contains('active')) {
+        closeModalFn();
+    }
+});
