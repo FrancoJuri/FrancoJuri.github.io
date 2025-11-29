@@ -14,6 +14,7 @@ const emiumiAppImg = document.querySelector('.emiumi-app-img');
 const ialfinanzasImg = document.querySelector('.ialfinanzas-img');
 const apartamentoslapalmaImg = document.querySelector('.apartamentoslapalma-img');
 const densoTechnologyImg = document.querySelector('.denso-technology-img');
+const palmacorpeEsImg = document.querySelector('.palmacorpe-es-img');
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -39,6 +40,7 @@ function changeImgs(){
         ialfinanzasImg.src = '../assets/images/ialfinanzas-responsive.webp';
         apartamentoslapalmaImg.src = '../assets/images/apartamentoslapalma-responsive.webp';
         densoTechnologyImg.src = '../assets/images/denso-technology-responsive.webp';
+        palmacorpeEsImg.src = '../assets/images/palmacorpe-es-responsive.webp';
     } else {
         freeGamesImg.src = '../assets/images/free-games-app.webp';
         meeurhaApp.src = '../assets/images/meeurha-com.webp';
@@ -56,6 +58,7 @@ function changeImgs(){
         ialfinanzasImg.src = '../assets/images/ialfinanzas.webp';
         apartamentoslapalmaImg.src = '../assets/images/apartamentoslapalma.webp';
         densoTechnologyImg.src = '../assets/images/denso-technology.webp';
+        palmacorpeEsImg.src = '../assets/images/palmacorpe-es.webp';
     }
 
     const copyrightYear = new Date().getFullYear();
